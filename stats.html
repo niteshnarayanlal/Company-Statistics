@@ -1,0 +1,44 @@
+<html>
+	<head>
+	 <link rel="stylesheets" type="text/css" href="style.css">
+	 <title>Company Statistics</title>
+	 
+	 <script type="text/javascript">
+	 
+		function validate() {
+			var loc = document.getElementById("location").value;
+			var to = document.getElementById("turnover").value;
+			var noemp = document.getElementById("noofemployees").value;
+			var cname = document.getElementById("cname").value;
+			if( loc.length == 0 || to.length == 0 || noemp.length == 0 || cname.length == 0 ) {
+				alert("All fields are compulsory");
+				return false;
+			}
+			
+			return true;
+		}
+	 
+	 </script>
+	 
+	</head>
+	<body>
+		<div id="stylized" class="myform">
+	   	<form id="myform" method="post" onsubmit="return validate(); "action="insert.php">
+			<h1>Company Registration Form</h1>
+            <p>Enter your company details below</p>
+
+				Company Name*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="cname" id="cname" class="small"/><br/><br/>
+				Location:*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="location" name="location" class="small"><br/><br/>
+				<option value="noida">Noida</option>
+				<option value="delhi">Delhi</option>
+				<option value="bangalore">Bangalore</option><br/>
+				<option value="chennai">Chennai</option><br/>
+				</select><br/><br/>
+             	Turnover:*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="turnover" id="turnover" class="small"/><br/><br/>
+	            Number Of Employees:*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="noofemployees" id="noofemployees" class="small"/><br/><br/>
+	            <input id="btnsubmit" type="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	            <input id="btnreset" type="reset" value="Reset">
+    	</form>
+        </div>
+	</body>
+</html>
